@@ -6,23 +6,23 @@ function makeChart(myData) {
     let delayed;
 
     // data for test preparation course status
-    var lunchType = myData.map(function (d) {
+    var lunchType = myData.map(function(d) {
         return d.exam;
     });
 
     // get pass & fail rate for Math exam
-    var standardPass = myData.map(function (d) {
+    var standardPass = myData.map(function(d) {
         return +d.standard_lunch_pass;
     });
-    var standardFail = myData.map(function (d) {
+    var standardFail = myData.map(function(d) {
         return +d.standard_lunch_fail;
     });
 
     // get pass & fail rate for Reading exam
-    var freeReducedPass = myData.map(function (d) {
+    var freeReducedPass = myData.map(function(d) {
         return +d.free_reduced_lunch_pass;
     });
-    var freeReducedFail = myData.map(function (d) {
+    var freeReducedFail = myData.map(function(d) {
         return +d.free_reduced_lunch_fail;
     });
 
@@ -32,8 +32,7 @@ function makeChart(myData) {
         type: 'bar',
         data: {
             labels: lunchType,
-            datasets: [
-                {
+            datasets: [{
                     label: "Standard Lunch Pass",
                     data: standardPass,
                     backgroundColor: 'rgba(0, 153, 0, 0.5)',
@@ -46,9 +45,9 @@ function makeChart(myData) {
                 {
                     label: "Standard Lunch Fail",
                     data: standardFail,
-                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                    hoverBackgroundColor: 'rgba(255, 0, 0, 1)',
-                    borderColor: 'rgba(255, 0, 0, 1)',
+                    backgroundColor: 'rgba(153, 0, 153, 0.5)',
+                    hoverBackgroundColor: 'rgba(153, 0, 153, 1)',
+                    borderColor: 'rgba(153, 0, 153, 1)',
                     borderWidth: 1,
                     barPercentage: 0.9,
                     categoryPercentage: 0.9,
@@ -56,9 +55,9 @@ function makeChart(myData) {
                 {
                     label: "Free/Reduced Lunch Pass",
                     data: freeReducedPass,
-                    backgroundColor: 'rgba(0, 179, 60, 0.5)',
-                    hoverBackgroundColor: 'rgba(0, 179, 60, 1)',
-                    borderColor: 'rgba(0, 179, 60, 1)',
+                    backgroundColor: 'rgba(0, 77, 153, 0.5)',
+                    hoverBackgroundColor: 'rgba(0, 77, 153, 1)',
+                    borderColor: 'rgba(0, 77, 153, 1)',
                     borderWidth: 2,
                     barPercentage: 0.9,
                     categoryPercentage: 0.9,
@@ -66,9 +65,9 @@ function makeChart(myData) {
                 {
                     label: "Free/Reduced Lunch Fail",
                     data: freeReducedFail,
-                    backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                    hoverBackgroundColor: 'rgba(255, 0, 0, 1)',
-                    borderColor: 'rgba(255, 0, 0, 1)',
+                    backgroundColor: 'rgba(153, 77, 0, 0.5)',
+                    hoverBackgroundColor: 'rgba(153, 77, 0, 1)',
+                    borderColor: 'rgba(153, 77, 0, 1)',
                     borderWidth: 1,
                     barPercentage: 0.9,
                     categoryPercentage: 0.9,
