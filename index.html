@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--import Chart.js library-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!--import D3 library-->
+        <script src="//d3js.org/d3.v7.min.js"></script>
+
+        <!--import jQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!--link google fonts api and Poppins font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!--link styles.css-->
+        <link rel="stylesheet" href="styles/index.css">
+
+        <title>Data Vis Projek</title>
+    </head>
+
+    <body>
+        <!-- Back to top button -->
+        <a id="backToTopButton"></a>
+
+        <!--hero image/banner-->
+        <div class="home-hero-image">
+            <div class="home-hero-text">
+                <h1>Students Academic Performance</h1>
+                <p>An In-depth Analysis</p>
+            </div>
+        </div>
+
+        <div class="chart-container" id="chart-container">
+            <h1 class="chart1-title">Test Preparation Course Status</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+
+        
+        <div class="chart-container2">
+            <button class="mathBtn">Math</button>
+            <button class="readingBtn">Reading</button>
+            <button class="writingBtn">Writing</button>
+
+            <div id="chart-container-math">
+                <h1 class="chart1-title">Math Exam Pass Rate Based On Lunch Type</h1>
+                <canvas id="myChartMath"></canvas>
+            </div>
+
+            <div id="chart-container-reading">
+                <h1 class="chart1-title">Reading Exam Pass Rate Based On Lunch Type</h1>
+                <canvas id="myChartReading"></canvas>
+            </div>
+
+            <div id="chart-container-writing">
+                <h1 class="chart1-title">Writing Exam Pass Rate Based On Lunch Type</h1>
+                <canvas id="myChartWriting"></canvas>
+            </div>
+        </div>
+
+        
+        <div class="chart-container3">
+            <h1 class="chart1-title">Lunch Type On Exam Results</h1>
+            <canvas id="myChartLunch"></canvas>
+        </div>
+
+        <script type="text/javascript" src="scripts/chart1.js"></script>
+        <script type="text/javascript" src="scripts/chart2.js"></script>
+        <script type="text/javascript" src="scripts/chart3.js"></script>
+        <script type="text/javascript" src="scripts/backToTop.js"></script>
+
+        <script>
+            $("#chart-container-math").show();
+            $("#chart-container-reading").hide();
+            $("#chart-container-writing").hide();
+
+            $(document).ready(function() {
+                $(".mathBtn").click(function () {
+                    $("#chart-container-math").fadeIn(1200, "swing");
+                    $("#chart-container-reading").hide();
+                    $("#chart-container-writing").hide();
+                });
+
+                $(".readingBtn").click(function () {
+                    $("#chart-container-reading").fadeIn(1200, "swing");
+                    $("#chart-container-math").hide();
+                    $("#chart-container-writing").hide();
+                });
+
+                $(".writingBtn").click(function () {
+                    $("#chart-container-writing").fadeIn(1200, "swing");
+                    $("#chart-container-math").hide();
+                    $("#chart-container-reading").hide();
+                });
+            });
+        </script>
+    </body>
+
+</html>
