@@ -73,6 +73,27 @@ function makeMathChart(myData) {
             tooltips: {
                 titleFontSize: 30,
             },
+            scales: {
+                x: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Lunch Type",
+                    },
+                },
+                y: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Number of Students",
+                    },
+                    offset: false,
+                },
+            },
         }
     });
 }

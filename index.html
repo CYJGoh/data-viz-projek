@@ -39,82 +39,23 @@
             </div>
         </div>
 
-        <div class="chart-container" id="chart-container">
-            <h1 class="chart1-title">Test Preparation Course Status</h1>
-            <canvas id="myChart"></canvas>
-        </div>
-
         
-        <div class="chart-container2">
-            <button class="mathBtn">Math</button>
-            <button class="readingBtn">Reading</button>
-            <button class="writingBtn">Writing</button>
-
-            <div id="chart-container-math">
-                <h1 class="chart1-title">Math Exam Pass Rate Based On Lunch Type</h1>
-                <canvas id="myChartMath"></canvas>
-            </div>
-
-            <div id="chart-container-reading">
-                <h1 class="chart1-title">Reading Exam Pass Rate Based On Lunch Type</h1>
-                <canvas id="myChartReading"></canvas>
-            </div>
-
-            <div id="chart-container-writing">
-                <h1 class="chart1-title">Writing Exam Pass Rate Based On Lunch Type</h1>
-                <canvas id="myChartWriting"></canvas>
-            </div>
-        </div>
-
-        
-        <div class="chart-container3">
-            <h1 class="chart1-title">Lunch Type On Exam Results</h1>
-            <canvas id="myChartLunch"></canvas>
-        </div>
-
-
-        <div class="chart-container4">
-            <select name="chart4selection" id="chart4choices" onchange="changeCharts()">
+        <!-- Dataset 2 (Lunch Dataset) Charts-->
+        <div class="lunchChartContainer">
+            <select name="lunchChartSelection" id="chart4choices" onchange="changeCharts()">
                 <option value="math" selected>Math</option>
                 <option value="reading">Reading</option>
                 <option value="writing">Writing</option>
             </select>
 
-            <h1 class="chart1-title" id="changingChartTitle"></h1>
+            <h1 class="lunchChartTitle" id="changingChartTitle"></h1>
             <canvas id="changingCharts"></canvas>
         </div>
 
-        <script type="text/javascript" src="scripts/chart1.js"></script>
-        <script type="text/javascript" src="scripts/chart2.js"></script>
-        <script type="text/javascript" src="scripts/chart3.js"></script>
+
+        <!-- Load scripts -->
         <script type="text/javascript" src="scripts/chart4.js"></script>
         <script type="text/javascript" src="scripts/backToTop.js"></script>
-
-        <script>
-            $("#chart-container-math").show();
-            $("#chart-container-reading").hide();
-            $("#chart-container-writing").hide();
-
-            $(document).ready(function() {
-                $(".mathBtn").click(function () {
-                    $("#chart-container-math").fadeIn(1200, "swing");
-                    $("#chart-container-reading").hide();
-                    $("#chart-container-writing").hide();
-                });
-
-                $(".readingBtn").click(function () {
-                    $("#chart-container-reading").fadeIn(1200, "swing");
-                    $("#chart-container-math").hide();
-                    $("#chart-container-writing").hide();
-                });
-
-                $(".writingBtn").click(function () {
-                    $("#chart-container-writing").fadeIn(1200, "swing");
-                    $("#chart-container-math").hide();
-                    $("#chart-container-reading").hide();
-                });
-            });
-        </script>
     </body>
 
 </html>

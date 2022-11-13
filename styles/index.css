@@ -82,38 +82,12 @@ body {
 
 
 /* === Chart styling === */
-.chart1-title {
+.lunchChartTitle {
     color: rgba(38, 38, 38, 1);
     text-align: center;
 }
 
-.chart-container {
-    position: relative;
-    width: 50vw;
-    height: 40vh;
-    margin: auto;
-}
-
-.chart-container2 {
-    position: relative;
-    width: 50vw;
-    height: 40vh;
-    margin: auto;
-    margin-top: 220px;
-    opacity: 1;
-    transition: visibility 0s, opacity 0s linear;
-}
-
-.chart-container3 {
-    position: relative;
-    width: 50vw;
-    height: 60vh;
-    margin: auto;
-    margin-top: 320px;
-    margin-bottom: 200px;
-}
-
-.chart-container4 {
+.lunchChartContainer {
     position: relative;
     width: 50vw;
     height: 60vh;
