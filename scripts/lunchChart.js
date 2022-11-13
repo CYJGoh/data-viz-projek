@@ -1,16 +1,21 @@
-// plot the data with Chart.js
-var chart = null;
+var chart = null; // set chart value to null
+
+// load math chart and title as default chart
 d3.csv('datasets/lunch_dataset/math_stats.csv').then(makeMathChart);
 document.getElementById("changingChartTitle").innerHTML = "Math Exam Pass Rate Based On Lunch Type";
+
+// ==================================================================================================================
 
 // create chart for Math results
 function makeMathChart(myData) {
     let delayed;
 
+    // check if chart is null or not and if its not, destroy chart
     if (chart !== null) {
         chart.destroy();
     }
 
+    // change chart title based on 
     document.getElementById("changingChartTitle").innerHTML = "Math Exam Pass Rate Based On Lunch Type";
     // data for test preparation course status
     var lunchType = myData.map(function (d) {
@@ -98,6 +103,7 @@ function makeMathChart(myData) {
     });
 }
 
+// ==================================================================================================================
 
 // create chart for Reading results
 function makeReadingChart(myData) {
@@ -173,6 +179,7 @@ function makeReadingChart(myData) {
     });
 }
 
+// ==================================================================================================================
 
 // create chart for Writing results
 function makeWritingChart(myData) {
@@ -249,6 +256,7 @@ function makeWritingChart(myData) {
 }
 
 
+
 // function to switch between charts when selecting an option from dropdown menu
 function changeCharts() {
     var myVal = document.getElementById("chart4choices").value;
@@ -262,3 +270,7 @@ function changeCharts() {
         d3.csv('datasets/lunch_dataset/writing_stats.csv').then(makeWritingChart);
     }
 }
+
+
+
+//
