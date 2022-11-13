@@ -75,13 +75,12 @@
 
         <div class="chart-container4">
             <select name="chart4selection" id="chart4choices" onchange="changeCharts()">
-                <option value="-">Choose a subject</option>
-                <option value="math">Math</option>
+                <option value="math" selected>Math</option>
                 <option value="reading">Reading</option>
                 <option value="writing">Writing</option>
             </select>
 
-            <h1 class="chart1-title">Temp</h1>
+            <h1 class="chart1-title" id="changingChartTitle"></h1>
             <canvas id="changingCharts"></canvas>
         </div>
 
