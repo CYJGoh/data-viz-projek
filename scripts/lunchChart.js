@@ -175,6 +175,27 @@ function makeReadingChart(myData) {
             tooltips: {
                 titleFontSize: 30,
             },
+            scales: {
+                x: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Lunch Type",
+                    },
+                },
+                y: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Number of Students",
+                    },
+                    offset: false,
+                },
+            },
         }
     });
 }
@@ -251,6 +272,27 @@ function makeWritingChart(myData) {
             tooltips: {
                 titleFontSize: 30,
             },
+            scales: {
+                x: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Lunch Type",
+                    },
+                },
+                y: {
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Number of Students",
+                    },
+                    offset: false,
+                },
+            },
         }
     });
 }
@@ -270,7 +312,3 @@ function changeCharts() {
         d3.csv('datasets/lunch_dataset/writing_stats.csv').then(makeWritingChart);
     }
 }
-
-
-
-//

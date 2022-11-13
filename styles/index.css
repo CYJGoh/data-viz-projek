@@ -96,44 +96,23 @@ body {
     margin-bottom: 200px;
 }
 
-.mathBtn, .readingBtn, .writingBtn {
-    padding: 15px 35px 15px 35px;
-    margin-right: 10px;
-    font-size: 12pt;
-    font-weight: 500;
+#chart4choices {
+    font-size: 1vw;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px 10px;
     border: none;
-    color: white;
+    outline: 2px solid rgba(38, 98, 255, 1);
     border-radius: 5px;
-    transition: 0.3s;
+    transition: 0.5s outline;
 }
 
-.mathBtn:hover, .readingBtn:hover, .writingBtn:hover {
+#chart4choices:hover {
+    outline: 2px solid rgba(38, 98, 255, 0.5);
+}
+
+#chart4choices:hover, #chart4choices option:hover {
     cursor: pointer;
 }
-
-.mathBtn {
-    background-color: rgba(0, 92, 230, 1);
-}
-.mathBtn:hover {
-    background-color: rgba(0, 71, 179, 1);
-}
-
-
-.readingBtn {
-    background-color: rgba(255, 133, 51, 1);
-}
-.readingBtn:hover {
-    background-color: rgba(255, 102, 0, 1);
-}
-
-
-.writingBtn {
-    background-color: rgba(115, 0, 230, 1);
-}
-.writingBtn:hover {
-    background-color: rgba(89, 0, 179, 1);
-}
-
 
 
 /* === scrollbar styling === */
