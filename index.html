@@ -74,9 +74,13 @@
 
 
         <div class="chart-container4">
-            <button class="mathBtn">Math</button>
-            <button class="readingBtn">Reading</button>
-            
+            <select name="chart4selection" id="chart4choices" onchange="changeCharts()">
+                <option value="-">Choose a subject</option>
+                <option value="math">Math</option>
+                <option value="reading">Reading</option>
+                <option value="writing">Writing</option>
+            </select>
+
             <h1 class="chart1-title">Temp</h1>
             <canvas id="changingCharts"></canvas>
         </div>
@@ -84,6 +88,7 @@
         <script type="text/javascript" src="scripts/chart1.js"></script>
         <script type="text/javascript" src="scripts/chart2.js"></script>
         <script type="text/javascript" src="scripts/chart3.js"></script>
+        <script type="text/javascript" src="scripts/chart4.js"></script>
         <script type="text/javascript" src="scripts/backToTop.js"></script>
 
         <script>
