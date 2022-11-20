@@ -6,14 +6,15 @@ function getPointCategoryName(point, dimension) {
 }
 
 // load csv
-var csv = d3.csv('datasets/studytimeData.csv', function(d) {
+var myData = [];
+
+var csv = d3.csv('datasets/studytimedata.csv', function(d) {
     for (var i = 0; i < d.length; i++) {
         console.log(d[i].x);
         console.log(d[i].y);
         console.log(d[i].value);
     }
 });
-var myData = [];
 
 Highcharts.chart('heatmapContainer', {
 
