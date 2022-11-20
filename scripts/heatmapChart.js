@@ -5,17 +5,6 @@ function getPointCategoryName(point, dimension) {
     return axis.categories[point[isY ? 'y' : 'x']];
 }
 
-// load csv
-var myData = [];
-
-var csv = d3.csv('datasets/studytimedata.csv', function(d) {
-    for (var i = 0; i < d.length; i++) {
-        console.log(d[i].x);
-        console.log(d[i].y);
-        console.log(d[i].value);
-    }
-});
-
 Highcharts.chart('heatmapContainer', {
 
     chart: {
