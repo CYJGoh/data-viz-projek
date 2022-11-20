@@ -13,11 +13,12 @@ Highcharts.chart('heatmapContainer', {
         marginBottom: 80,
         plotBorderWidth: 1,
         backgroundColor: '#EFEFEF',
+        height: 500,
     },
 
 
     title: {
-        text: 'Students study time by amount of free time'
+        text: '',
     },
 
     xAxis: {
@@ -54,7 +55,7 @@ Highcharts.chart('heatmapContainer', {
         margin: 0,
         verticalAlign: 'top',
         y: 25,
-        symbolHeight: 280
+        symbolHeight: 380
     },
 
     tooltip: {

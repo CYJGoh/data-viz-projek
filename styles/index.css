@@ -118,12 +118,17 @@ body {
 }
 
 
+
 /* === Heatmap Chart Styling === */
 .highcharts-figure,
 .highcharts-data-table table {
     min-width: 360px;
     max-width: 900px;
     margin: 1em auto;
+}
+
+.highcharts-figure h1 {
+    text-align: center;
 }
 
 .highcharts-data-table table {
@@ -166,6 +171,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+
+.highcharts-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
 
 
 
