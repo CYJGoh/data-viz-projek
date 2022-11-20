@@ -96,6 +96,7 @@ body {
     margin: auto;
     margin-top: 0px;
     margin-bottom: 200px;
+    display: hidden;
 }
 
 #chart4choices {
@@ -120,6 +121,10 @@ body {
 
 
 /* === Heatmap Chart Styling === */
+.highcharts-figure {
+    display: hidden;
+}
+
 .highcharts-figure,
 .highcharts-data-table table {
     min-width: 360px;

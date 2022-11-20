@@ -8,6 +8,7 @@
 
     <!--import jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
 
     <!--import D3 library-->
     <script src="//d3js.org/d3.v7.min.js"></script>
@@ -82,6 +83,20 @@
     <script type="text/javascript" src="scripts/lunchChart.js"></script>
     <script type="text/javascript" src="scripts/heatmapChart.js"></script>
     <script type="text/javascript" src="scripts/backToTop.js"></script>
+
+    <script>
+        // script to fade in elements when scrolling
+
+        $(document).scroll(function() {
+            var y = $(this).scrollTop();
+
+            if (y > 500) {
+                $('.lunchChartContainer').show('slow', 'swing');
+            } else {
+                $('.lunchChartContainer').hide('slow', 'swing');
+            }
+        });
+    </script>
 </body>
 
 </html>
