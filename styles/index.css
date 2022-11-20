@@ -42,6 +42,7 @@ body {
 #backToTopButton:active {
     background-color: #555;
 }
+
 #backToTopButton.show {
     opacity: 1;
     visibility: visible;
@@ -75,13 +76,14 @@ body {
 .home-hero-text h1 {
     font-size: 3vw;
 }
+
 .home-hero-text p {
     font-size: 2vw;
 }
 
 
 
-/* === Chart styling === */
+/* === Lunch Chart styling === */
 .lunchChartTitle {
     color: rgba(38, 38, 38, 1);
     text-align: center;
@@ -110,28 +112,81 @@ body {
     outline: 2px solid rgba(38, 98, 255, 0.5);
 }
 
-#chart4choices:hover, #chart4choices option:hover {
+#chart4choices:hover,
+#chart4choices option:hover {
     cursor: pointer;
 }
 
 
+/* === Heatmap Chart Styling === */
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 360px;
+    max-width: 900px;
+    margin: 1em auto;
+    background-color: #EFEFEF;
+}
+
+.highcharts-data-table table {
+    font-family: 'Montserrat', sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+
+.highcharts-description {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+
+
+
 /* === scrollbar styling === */
-::-webkit-scrollbar-track
-{
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5;
 }
 
-::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: rgba(128, 128, 128, 0.7);
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: rgba(128, 128, 128, 0.7);
 }

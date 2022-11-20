@@ -1,61 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--import Chart.js library-->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--import D3 library-->
-        <script src="//d3js.org/d3.v7.min.js"></script>
+    <!--import jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-        <!--import jQuery library-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!--import D3 library-->
+    <script src="//d3js.org/d3.v7.min.js"></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--import Chart.js library-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <!--link google fonts api and Poppins font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        
-        <!--link styles.css-->
-        <link rel="stylesheet" href="styles/index.css">
+    <!--import HighCharts library-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
 
-        <title>Data Vis Projek</title>
-    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <body>
-        <!-- Back to top button -->
-        <a id="backToTopButton"></a>
+    <!--link google fonts api and Poppins font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 
-        <!--hero image/banner-->
-        <div class="home-hero-image">
-            <div class="home-hero-text">
-                <h1>Students Academic Performances</h1>
-                <p>An In-depth Analysis</p>
-            </div>
+    <!--link styles.css-->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Data Vis Projek</title>
+</head>
+
+<body>
+    <!-- Back to top button -->
+    <a id="backToTopButton"></a>
+
+    <!--hero image/banner-->
+    <div class="home-hero-image">
+        <div class="home-hero-text">
+            <h1>Students Academic Performances</h1>
+            <p>An In-depth Analysis</p>
         </div>
-
-        
-        <!-- Dataset 2 (Lunch Dataset) Charts-->
-        <div class="lunchChartContainer">
-            <select name="lunchChartSelection" id="chart4choices" onchange="changeCharts()">
-                <option value="math" selected>Math</option>
-                <option value="reading">Reading</option>
-                <option value="writing">Writing</option>
-            </select>
-
-            <h1 class="lunchChartTitle" id="changingChartTitle"></h1>
-            <canvas id="changingCharts"></canvas>
-        </div>
+    </div>
 
 
-        <!-- Load scripts -->
-        <script type="text/javascript" src="scripts/lunchChart.js"></script>
-        <script type="text/javascript" src="scripts/backToTop.js"></script>
-    </body>
+    <!-- Dataset 2 (Lunch Dataset) Charts-->
+    <div class="lunchChartContainer">
+        <select name="lunchChartSelection" id="chart4choices" onchange="changeCharts()">
+            <option value="math" selected>Math</option>
+            <option value="reading">Reading</option>
+            <option value="writing">Writing</option>
+        </select>
+
+        <h1 class="lunchChartTitle" id="changingChartTitle"></h1>
+        <canvas id="changingCharts"></canvas>
+    </div>
+
+
+    <!--heatmap chart (student's study time based on free time)-->
+    <figure class="highcharts-figure">
+        <div id="heatmapContainer"></div>
+        <p class="highcharts-description">
+            Heatmap showing study time data per free time. Heatmaps are commonly used to
+            visualize hot spots within data sets, and to show patterns or correlations.
+            Due to their compact nature, they are often used with large sets of data.
+        </p>
+    </figure>
+
+
+    <!-- Load scripts -->
+    <script type="text/javascript" src="scripts/lunchChart.js"></script>
+    <script type="text/javascript" src="scripts/heatmapChart.js"></script>
+    <script type="text/javascript" src="scripts/backToTop.js"></script>
+</body>
 
 </html>
