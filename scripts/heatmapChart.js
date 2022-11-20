@@ -11,7 +11,8 @@ Highcharts.chart('heatmapContainer', {
         type: 'heatmap',
         marginTop: 40,
         marginBottom: 80,
-        plotBorderWidth: 1
+        plotBorderWidth: 1,
+        backgroundColor: '#EFEFEF',
     },
 
 
@@ -43,8 +44,8 @@ Highcharts.chart('heatmapContainer', {
 
     colorAxis: {
         min: 0,
-        minColor: '#FFFFFF',
-        maxColor: Highcharts.getOptions().colors[0]
+        minColor: '#E6F0FF',
+        maxColor: '#003380'
     },
 
     legend: {
@@ -109,6 +110,9 @@ Highcharts.chart('heatmapContainer', {
                 }
             }
         }]
-    }
+    },
 
+    credits: {
+        enabled: false
+    }
 });
