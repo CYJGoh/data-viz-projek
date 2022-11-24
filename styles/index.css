@@ -131,6 +131,17 @@ body {
     margin-top: 0px;
     margin-bottom: 200px;
     display: hidden;
+    opacity: 0;
+}
+
+.chartOne-fade-in {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+.chartOne-fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease;
 }
 
 #lunchChartChoices {
