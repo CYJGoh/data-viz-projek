@@ -6,6 +6,40 @@ body {
 }
 
 
+/* === Back to top button styling === */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#navbar a {
+    float: left;
+    display: block;
+    color: #EFEFEF;
+    text-align: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.7s;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.content {
+    padding-top: 60px;
+}
+
 
 /* === Back to top button styling === */
 #backToTopButton {
@@ -99,7 +133,7 @@ body {
     display: hidden;
 }
 
-#chart4choices {
+#lunchChartChoices {
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
     padding: 5px 10px;
@@ -109,12 +143,12 @@ body {
     transition: 0.5s outline;
 }
 
-#chart4choices:hover {
+#lunchChartChoices:hover {
     outline: 2px solid rgba(38, 98, 255, 0.5);
 }
 
-#chart4choices:hover,
-#chart4choices option:hover {
+#lunchChartChoices:hover,
+#lunchChartChoices option:hover {
     cursor: pointer;
 }
 

@@ -45,6 +45,13 @@
     <!-- Back to top button -->
     <a id="backToTopButton"></a>
 
+    <!-- navbar -->
+    <div id="navbar">
+        <a href="#">Dataset 1</a>
+        <a href="#">Dataset 2</a>
+        <a href="#">Dataset 3</a>
+    </div>
+
     <!--hero image/banner-->
     <div class="home-hero-image">
         <div class="home-hero-text">
@@ -56,7 +63,7 @@
 
     <!-- Dataset 2 (Lunch Dataset) Charts-->
     <div class="lunchChartContainer">
-        <select name="lunchChartSelection" id="chart4choices" onchange="changeCharts()">
+        <select name="lunchChartSelection" id="lunchChartChoices" onchange="changeCharts()">
             <option value="math" selected>Math</option>
             <option value="reading">Reading</option>
             <option value="writing">Writing</option>
@@ -83,6 +90,7 @@
     <script type="text/javascript" src="scripts/lunchChart.js"></script>
     <script type="text/javascript" src="scripts/heatmapChart.js"></script>
     <script type="text/javascript" src="scripts/backToTop.js"></script>
+    <script type="text/javascript" src="scripts/stickyNavbar.js"></script>
 
     <script>
         // script to fade in elements when scrolling

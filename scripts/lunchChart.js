@@ -301,7 +301,7 @@ function makeWritingChart(myData) {
 
 // function to switch between charts when selecting an option from dropdown menu
 function changeCharts() {
-    var myVal = document.getElementById("chart4choices").value;
+    var myVal = document.getElementById("lunchChartChoices").value;
     if (myVal === "math") {
         d3.csv('datasets/lunch_dataset/math_stats.csv').then(makeMathChart);
     }
