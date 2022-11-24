@@ -12,12 +12,13 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'heatmap',
             marginTop: 40,
             marginBottom: 80,
-            plotBorderWidth: 1
+            plotBorderWidth: 1,
+            backgroundColor: '#EFEFEF',
         },
 
 
         title: {
-            text: 'Number of students who failed Maths according to their weekly study time and free time after school'
+            text: 'Number of students who failed Maths by weekly study time and free time after school'
         },
 
         subtitle: {
@@ -66,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         tooltip: {
+
             formatter: function() {
-                return '<b>' + getPointCategoryName(this.point, 'x') + '</b> sold <br><b>' +
-                    this.point.value + '</b> items on <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+                return '<b>' + this.point.value + ' </b> students with <b>' + getPointCategoryName(this.point, 'y') + '</b> free time and <br><b>' +
+                    getPointCategoryName(this.point, 'x') + '</b> weekly study time failed';
             }
         },
 
@@ -102,6 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 color: '#000000'
             }
         }],
+
+        credits: {
+            enabled: false
+        },
 
         responsive: {
             rules: [{
