@@ -1,56 +1,42 @@
-chart = new Chart('PELChart', {
+var ctx = document.getElementById("PELChart").getContext('2d');
+
+var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Pass", "Fail"],
-        datasets: [
-            {
-                label: "Pass",
-                data: [23, 12, 44],
-                backgroundColor: 'rgba(0, 179, 60, 0.5)',
-                hoverBackgroundColor: 'rgba(0, 179, 60, 1)',
-                borderColor: 'rgba(0, 179, 60, 1)',
-                borderWidth: 2,
-                barPercentage: 0.6,
-                categoryPercentage: 0.6,
-            },
-            {
-                label: "Fail",
-                data: [5, 65, 13],
-                backgroundColor: 'rgba(255, 0, 0, 0.5)',
-                hoverBackgroundColor: 'rgba(255, 0, 0, 1)',
-                borderColor: 'rgba(255, 0, 0, 1)',
-                borderWidth: 1,
-                barPercentage: 0.6,
-                categoryPercentage: 0.6,
-                borderDashOffset: 0.5,
-            }
-        ]
+        labels: ["some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"],
+        datasets: [{
+            label: 'Pass',
+            backgroundColor: "#caf270",
+            data: [1,2,3,4,5,6],
+        }, {
+            label: 'Fail',
+            backgroundColor: "#45c490",
+            data: [6,5,4,3,2,1],
+        }],
     },
     options: {
-        responsive: true,
         tooltips: {
-            titleFontSize: 30,
+            displayColors: true,
+            callbacks: {
+                mode: 'x',
+            },
         },
         scales: {
             x: {
-                ticks: {
-                    padding: 10,
-                },
-                title: {
-                    display: true,
-                    text: "Lunch Type",
-                },
+                stacked: true,
+                gridLines: {
+                    display: false,
+                }
             },
             y: {
+                stacked: true,
                 ticks: {
-                    padding: 10,
+                    beginAtZero: true,
                 },
-                title: {
-                    display: true,
-                    text: "Number of Students",
-                },
-                offset: false,
+                type: 'linear',
             },
         },
+        responsive: true,
+        maintainAspectRatio: false,
     }
 });
