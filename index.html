@@ -67,7 +67,7 @@
     </div>
 
     <!-- Chart based on parental education level -->
-    <div class="PELChartContainer">
+    <div class="PELChartContainer" id="PELChartOne">
         <h1>Pass/Fail Rate Based On Parental Education Level</h1>
         <canvas id="PELChart"></canvas>
     </div>
@@ -99,12 +99,12 @@
             
             if (y > 200) {
                 //$('.lunchChartContainer').show('slow', 'swing');
-                document.getElementById('lunchChartOne').classList.remove('chartOne-fade-out');
-                document.getElementById('lunchChartOne').classList.add('chartOne-fade-in');
+                document.getElementById('PELChartOne').classList.remove('chartOne-fade-out');
+                document.getElementById('PELChartOne').classList.add('chartOne-fade-in');
             } else {
                 //$('.lunchChartContainer').hide('slow', 'swing');
-                document.getElementById('lunchChartOne').classList.remove('chartOne-fade-in');
-                document.getElementById('lunchChartOne').classList.add('chartOne-fade-out');
+                document.getElementById('PELChartOne').classList.remove('chartOne-fade-in');
+                document.getElementById('PELChartOne').classList.add('chartOne-fade-out');
             }
             
         });
