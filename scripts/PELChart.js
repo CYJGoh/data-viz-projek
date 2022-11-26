@@ -1,42 +1,45 @@
-var ctx = document.getElementById("PELChart").getContext('2d');
+//var ctx = document.getElementById("PELChart").getContext('2d');
+//d3.csv('datasets/lunch_dataset/math_stats.csv').then(makeMathChart);
 
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"],
-        datasets: [{
-            label: 'Pass',
-            backgroundColor: "#caf270",
-            data: [1,2,3,4,5,6],
-        }, {
-            label: 'Fail',
-            backgroundColor: "#45c490",
-            data: [6,5,4,3,2,1],
-        }],
-    },
-    options: {
-        tooltips: {
-            displayColors: true,
-            callbacks: {
-                mode: 'x',
-            },
+function makePELChart(myData) {
+    var myChart = new Chart("PELChart", {
+        type: 'bar',
+        data: {
+            labels: ["some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"],
+            datasets: [{
+                label: 'Pass',
+                backgroundColor: "#caf270",
+                data: [1, 2, 3, 4, 5, 6],
+            }, {
+                label: 'Fail',
+                backgroundColor: "#45c490",
+                data: [6, 5, 4, 3, 2, 1],
+            }],
         },
-        scales: {
-            x: {
-                stacked: true,
-                gridLines: {
-                    display: false,
-                }
-            },
-            y: {
-                stacked: true,
-                ticks: {
-                    beginAtZero: true,
+        options: {
+            tooltips: {
+                displayColors: true,
+                callbacks: {
+                    mode: 'x',
                 },
-                type: 'linear',
             },
-        },
-        responsive: true,
-        maintainAspectRatio: false,
-    }
-});
+            scales: {
+                x: {
+                    stacked: true,
+                    gridLines: {
+                        display: false,
+                    }
+                },
+                y: {
+                    stacked: true,
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                    type: 'linear',
+                },
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+        }
+    });
+}
