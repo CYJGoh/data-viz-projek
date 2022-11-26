@@ -1,19 +1,38 @@
-//var ctx = document.getElementById("PELChart").getContext('2d');
-//d3.csv('datasets/lunch_dataset/math_stats.csv').then(makeMathChart);
+d3.csv('datasets/lunch_dataset/PELData.csv').then(makePELChart);
 
 function makePELChart(myData) {
+    var PELType = myData.map(function (d) {
+        return d.ParentalEducationLevel;
+    });
+    var passRate = myData.map(function (d) {
+        return +d.Pass;
+    });
+    var failRate = myData.map(function (d) {
+        return +d.Fail;
+    });
+
     var myChart = new Chart("PELChart", {
         type: 'bar',
         data: {
-            labels: ["some high school", "high school", "some college", "associate's degree", "bachelor's degree", "master's degree"],
+            labels: PELType,
             datasets: [{
-                label: 'Pass',
-                backgroundColor: "#caf270",
-                data: [1, 2, 3, 4, 5, 6],
-            }, {
                 label: 'Fail',
-                backgroundColor: "#45c490",
-                data: [6, 5, 4, 3, 2, 1],
+                data: failRate,
+                backgroundColor: 'rgba(255, 0, 0, 0.5)',
+                hoverBackgroundColor: 'rgba(255, 0, 0, 1)',
+                borderColor: 'rgba(255, 0, 0, 1)',
+                borderWidth: 1.5,
+                barPercentage: 0.8,
+                categoryPercentage: 0.8,
+            }, {
+                label: 'Pass',
+                data: passRate,
+                backgroundColor: 'rgba(0, 179, 60, 0.5)',
+                hoverBackgroundColor: 'rgba(0, 179, 60, 1)',
+                borderColor: 'rgba(0, 179, 60, 1)',
+                borderWidth: 1.5,
+                barPercentage: 0.8,
+                categoryPercentage: 0.8,
             }],
         },
         options: {
@@ -28,12 +47,24 @@ function makePELChart(myData) {
                     stacked: true,
                     gridLines: {
                         display: false,
-                    }
+                    },
+                    ticks: {
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Parental Education Level",
+                    },
                 },
                 y: {
                     stacked: true,
                     ticks: {
                         beginAtZero: true,
+                        padding: 10,
+                    },
+                    title: {
+                        display: true,
+                        text: "Number of Students",
                     },
                     type: 'linear',
                 },

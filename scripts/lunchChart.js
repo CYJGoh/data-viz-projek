@@ -54,7 +54,6 @@ function makeMathChart(myData) {
                     borderWidth: 1,
                     barPercentage: 0.6,
                     categoryPercentage: 0.6,
-                    borderDashOffset: 0.5,
                 }
             ]
         },
@@ -150,7 +149,6 @@ function makeReadingChart(myData) {
                     borderWidth: 1,
                     barPercentage: 0.6,
                     categoryPercentage: 0.6,
-                    borderDashOffset: 0.5,
                 }
             ]
         },
@@ -246,7 +244,6 @@ function makeWritingChart(myData) {
                     borderWidth: 1,
                     barPercentage: 0.6,
                     categoryPercentage: 0.6,
-                    borderDashOffset: 0.5,
                 }
             ]
         },
