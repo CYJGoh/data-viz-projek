@@ -117,7 +117,7 @@ body {
 
 
 
-/* === Lunch Chart styling === */
+/* === Text container styling === */
 .contentContainer {
     width: 500px;
     border: none;
@@ -127,6 +127,20 @@ body {
     margin-bottom: 10px;
     margin: 0 auto;
     text-align: justify;
+}
+
+
+
+/* === Lunch Chart styling === */
+.PELChartContainer {
+    position: relative;
+    width: 50vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    display: hidden;
+    opacity: 0;
 }
 
 

@@ -66,7 +66,14 @@
         The subject exams that were recorded were Maths, Reading, and Writing</p>
     </div>
 
-    <!-- Dataset 2 (Lunch Dataset) Charts-->
+    <!-- Chart based on parental education level -->
+    <div class="PELChartContainer">
+        <h1>Pass/Fail Rate Based On Parental Education Level</h1>
+        <canvas id="PELChart"></canvas>
+    </div>
+
+
+    <!-- Chart based on student lunch -->
     <div class="lunchChartContainer" id="lunchChartOne">
         <select name="lunchChartSelection" id="lunchChartChoices" onchange="changeCharts()">
             <option value="math" selected>Math</option>
@@ -80,6 +87,7 @@
 
 
     <!-- Load scripts -->
+    <script type="text/javascript" src="scripts/PELChart.js"></script>
     <script type="text/javascript" src="scripts/lunchChart.js"></script>
     <script type="text/javascript" src="scripts/backToTop.js"></script>
     <script type="text/javascript" src="scripts/stickyNavbar.js"></script>
