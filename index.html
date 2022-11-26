@@ -62,13 +62,34 @@
 
     <!--context card-->
     <div class="contentContainer">
-        <p>This dataset looks at the students academic performances in their exams.
-        The subject exams that were recorded were Maths, Reading, and Writing</p>
+        <table>
+            <tr>
+                <th class="small-non-bold">Total Pass</th>
+                <th class="small-non-bold">Total Fail</th>
+            </tr>
+            <tr>
+                <td class="big-bold">1298</td>
+                <td class="big-bold">378</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th class="small-non-bold">Tester</th>
+                <th class="small-non-bold">Tester</th>
+            </tr>
+            <tr>
+                <td class="big-bold">Some High School</td>
+                <td class="big-bold">Associate's Degree</td>
+            </tr>
+        </table>
     </div>
+
+    <hr class="line-black">
 
     <!-- Chart based on parental education level -->
     <div class="PELChartContainer" id="PELChartOne">
-        <h1>Pass/Fail Rate Based On Parental Education Level</h1>
+        <h1>Maths Pass/Fail Rate Based On Parental Education Level</h1>
         <canvas id="PELChart"></canvas>
     </div>
 
@@ -97,12 +118,17 @@
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             
-            if (y > 200) {
+            if (y > 400) {
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('PELChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('PELChartOne').classList.add('chartOne-fade-in');
+            } else {
+                document.getElementById('PELChartOne').classList.add('chartOne-fade-out');
+                document.getElementById('PELChartOne').classList.remove('chartOne-fade-in');
             }
-            if (y > 500) {
+
+
+            if (y > 1200) {
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('lunchChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('lunchChartOne').classList.add('chartOne-fade-in');

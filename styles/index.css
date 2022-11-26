@@ -119,14 +119,28 @@ body {
 
 /* === Text container styling === */
 .contentContainer {
-    width: 500px;
+    text-align: justify;
     border: none;
     border-radius: 5px;
-    outline: 2px solid black;
-    padding: 10px 25px;
     margin-bottom: 10px;
-    margin: 0 auto;
-    text-align: justify;
+    margin-left: 475px;
+}
+
+.small-non-bold {
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: 400;
+    width: 280px;
+}
+.big-bold {
+    text-decoration: none;
+    font-size: 20pt;
+    font-weight: 700;
+}
+
+.line-black {
+    border: 1px solid #cacaca;
+    width: 970px;
 }
 
 
