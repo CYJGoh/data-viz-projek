@@ -101,10 +101,11 @@
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('PELChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('PELChartOne').classList.add('chartOne-fade-in');
-            } else {
-                //$('.lunchChartContainer').hide('slow', 'swing');
-                document.getElementById('PELChartOne').classList.remove('chartOne-fade-in');
-                document.getElementById('PELChartOne').classList.add('chartOne-fade-out');
+            }
+            if (y > 500) {
+                //$('.lunchChartContainer').show('slow', 'swing');
+                document.getElementById('lunchChartOne').classList.remove('chartOne-fade-out');
+                document.getElementById('lunchChartOne').classList.add('chartOne-fade-in');
             }
             
         });
