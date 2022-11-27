@@ -117,6 +117,13 @@ body {
 
 
 
+.dataset-context-container {
+    margin-left: 475px;
+    margin-bottom: 30px;
+}
+
+
+
 /* === Text container styling === */
 .contentContainer {
     text-align: justify;
@@ -128,7 +135,7 @@ body {
 
 .small-non-bold {
     text-decoration: none;
-    font-size: 12pt;
+    font-size: 11pt;
     font-weight: 400;
     width: 280px;
 }
