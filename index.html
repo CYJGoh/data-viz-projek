@@ -133,7 +133,7 @@
         </table>
     </div>
 
-    <hr class="line-black"><br><br>
+    <hr class="line-black"><br>
 
     <!-- Chart based on student lunch -->
     <div class="lunchChartContainer" id="lunchChartOne">
@@ -159,7 +159,7 @@
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             
-            if (y > 400) {
+            if (y > 900) {
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('PELChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('PELChartOne').classList.add('chartOne-fade-in');
@@ -169,7 +169,7 @@
             }
 
 
-            if (y > 1200) {
+            if (y > 1800) {
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('lunchChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('lunchChartOne').classList.add('chartOne-fade-in');
