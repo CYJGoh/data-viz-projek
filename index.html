@@ -28,14 +28,14 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <!--link google fonts api and Poppins font-->
+    <!-- link google fonts api and Poppins font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!--link styles.css-->
+    <!-- link styles.css -->
     <link rel="stylesheet" href="styles/index.css">
 
     <title>Data Vis Projek</title>
@@ -60,7 +60,10 @@
         </div>
     </div>
 
-    <!--context card-->
+    <!-- dataset context container -->
+    <div class="dataset-context-container"></div>
+
+    <!-- chart context card -->
     <div class="contentContainer">
         <table>
             <tr>
@@ -132,6 +135,9 @@
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('lunchChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('lunchChartOne').classList.add('chartOne-fade-in');
+            } else {
+                document.getElementById('lunchChartOne').classList.add('chartOne-fade-out');
+                document.getElementById('lunchChartOne').classList.remove('chartOne-fade-in');
             }
             
         });
