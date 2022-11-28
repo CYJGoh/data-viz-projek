@@ -46,7 +46,7 @@ $.get("datasets/studytimedata.csv", function (CSVdata) {
                         xName = getPointCategoryName(point, 'x'),
                         yName = getPointCategoryName(point, 'y'),
                         val = point.value;
-                    return ix + '. ' + xName + ' sales ' + yName + ', ' + val + '.';
+                    return ix + '. ' + xName + ' students ' + yName + ', ' + val + '.';
                 }
             }
         },
@@ -74,7 +74,7 @@ $.get("datasets/studytimedata.csv", function (CSVdata) {
         },
 
         series: [{
-            name: 'Sales per employee',
+            name: 'Student Count',
             borderWidth: 1,
             data: nums,
             dataLabels: {

@@ -73,6 +73,33 @@
 
     <hr class="line-black"><br><br>
 
+    <!-- chart context card -->
+    <div class="contentContainer">
+        <table>
+            <tr>
+                <th class="small-non-bold">Optimal Study Time</th>
+                <th class="small-non-bold">Optimal Free Time</th>
+            </tr>
+            <tr>
+                <td class="big-bold">2 Hours</td>
+                <td class="big-bold">3 Hours</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th class="small-non-bold">Highest Student Count</th>
+                <th class="small-non-bold">Lowest Student Count</th>
+            </tr>
+            <tr>
+                <td class="big-bold">82</td>
+                <td class="big-bold">1</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="line-black">
+
     <!--heatmap chart (student's study time based on free time)-->
     <figure class="highcharts-figure" id="HeatmapChartOne">
         <h1>Students' Study Time By Amount Of Free Time</h1>
@@ -95,7 +122,7 @@
         $(document).scroll(function () {
             var y = $(this).scrollTop();
             
-            if (y > 200) {
+            if (y > 900) {
                 //$('.lunchChartContainer').show('slow', 'swing');
                 document.getElementById('HeatmapChartOne').classList.remove('chartOne-fade-out');
                 document.getElementById('HeatmapChartOne').classList.add('chartOne-fade-in');
