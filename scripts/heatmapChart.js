@@ -6,7 +6,6 @@ function getPointCategoryName(point, dimension) {
 }
 
 
-
 $.get("datasets/studytimedata.csv", function (CSVdata) {
     // CSVdata is populated with the file contents...
     // ...ready to be converted into an Array
