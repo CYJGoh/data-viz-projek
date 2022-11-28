@@ -163,6 +163,11 @@ body {
     opacity: 0;
 }
 
+.PELChartContainer h1 {
+    color: rgba(38, 38, 38, 1);
+    text-align: center;
+}
+
 
 
 /* === Lunch Chart styling === */

@@ -17,6 +17,14 @@ function makeMathChart(myData) {
 
     // change chart title based on 
     document.getElementById("changingChartTitle").innerHTML = "Math Exam Pass Rate Based On Lunch Type";
+
+    document.getElementById("lunchPassValue").innerHTML = 606;
+    document.getElementById("lunchFailValue").innerHTML = 96;
+
+    document.getElementById("high-lunchTypeValue").innerHTML = "Standard Lunch";
+    document.getElementById("low-lunchTypeValue").innerHTML = "Free/Reduced Lunch";
+
+
     // data for test preparation course status
     var lunchType = myData.map(function (d) {
         return d.lunch_type;
@@ -112,6 +120,13 @@ function makeReadingChart(myData) {
     }
 
     document.getElementById("changingChartTitle").innerHTML = "Reading Exam Pass Rate Based On Lunch Type";
+
+    document.getElementById("lunchPassValue").innerHTML = 606;
+    document.getElementById("lunchFailValue").innerHTML = 51;
+
+    document.getElementById("high-lunchTypeValue").innerHTML = "Standard Lunch";
+    document.getElementById("low-lunchTypeValue").innerHTML = "Free/Reduced Lunch";
+
     // data for test preparation course status
     var lunchType = myData.map(function (d) {
         return d.lunch_type;
@@ -207,6 +222,13 @@ function makeWritingChart(myData) {
     }
 
     document.getElementById("changingChartTitle").innerHTML = "Writing Exam Pass Rate Based On Lunch Type";
+
+    document.getElementById("lunchPassValue").innerHTML = 592;
+    document.getElementById("lunchFailValue").innerHTML = 61;
+
+    document.getElementById("high-lunchTypeValue").innerHTML = "Standard Lunch";
+    document.getElementById("low-lunchTypeValue").innerHTML = "Free/Reduced Lunch";
+
     // data for test preparation course status
     var lunchType = myData.map(function (d) {
         return d.lunch_type;
