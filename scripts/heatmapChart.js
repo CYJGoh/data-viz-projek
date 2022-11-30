@@ -53,7 +53,8 @@ $.get("datasets/studytimedata.csv", function (CSVdata) {
         colorAxis: {
             min: 0,
             minColor: '#E6F0FF',
-            maxColor: '#003380'
+            maxColor: '#003380',
+            reversed: false,
         },
 
         legend: {
@@ -67,8 +68,8 @@ $.get("datasets/studytimedata.csv", function (CSVdata) {
 
         tooltip: {
             formatter: function () {
-                return '<b>' + getPointCategoryName(this.point, 'x') + '</b> for <br><b>' +
-                    this.point.value + '</b> student/s with <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+                return '<b>' + getPointCategoryName(this.point, 'x') + ' Study Time </b> for <br><b>' +
+                    this.point.value + '</b> students with <br><b>' + getPointCategoryName(this.point, 'y') + ' Free Time </b>';
             }
         },
 
