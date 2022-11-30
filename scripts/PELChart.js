@@ -64,7 +64,7 @@ function makePELChart(myData) {
                     },
                     title: {
                         display: true,
-                        text: "Student Percentage",
+                        text: "Student Percentage (%)",
                     },
                     type: 'linear',
                 },
