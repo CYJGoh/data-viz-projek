@@ -1,7 +1,8 @@
 ﻿ParentalEducationLevel,Pass,Fail
 some college,90,10
+bachelor's degree,90,10
+master's degree,90,10
 associate's degree,88,12
 high school,83,17
 some high school,80,20
-bachelor's degree,90,10
-master's degree,90,10
+
