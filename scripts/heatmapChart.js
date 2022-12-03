@@ -35,7 +35,7 @@ $.get("datasets/studytimedata.csv", function(CSVdata) {
         yAxis: {
             categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
             title: null,
-            reversed: true
+            //reversed: true
         },
 
         accessibility: {
@@ -156,7 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
         colorAxis: {
             min: 0,
             minColor: '#FFFFFF',
-            maxColor: '#FF0000'
+            maxColor: '#FF0000',
+            reversed: false,
         },
 
         legend: {
@@ -165,7 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
             margin: 0,
             verticalAlign: 'top',
             y: 25,
-            symbolHeight: 280,
+            symbolHeight: 580,
             reversed: true
         },
 
@@ -178,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         data: {
-            csvURL: window.location.origin + '/COS30045/data-viz-projek/datasets/student_math_fail.csv'
+            csvURL: window.location.origin + '/datasets/student_math_fail.csv'
         },
 
         series: [{
@@ -264,7 +265,8 @@ document.addEventListener('DOMContentLoaded', function() {
         colorAxis: {
             min: 0,
             minColor: '#FFFFFF',
-            maxColor: '#00b33c'
+            maxColor: '#00b33c',
+            reversed: false,
         },
 
         legend: {
@@ -273,8 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
             margin: 0,
             verticalAlign: 'top',
             y: 25,
-            symbolHeight: 280,
-            reversed: true
+            symbolHeight: 580,
+            reversed: true,
         },
 
         tooltip: {
@@ -286,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         data: {
-            csvURL: window.location.origin + '/COS30045/data-viz-projek/datasets/student_math_pass.csv'
+            csvURL: window.location.origin + '/datasets/student_math_pass.csv'
         },
 
         series: [{
@@ -372,7 +374,8 @@ document.addEventListener('DOMContentLoaded', function() {
         colorAxis: {
             min: 0,
             minColor: '#FFFFFF',
-            maxColor: '#00b33c'
+            maxColor: '#00b33c',
+            reversed: false,
         },
 
         legend: {
@@ -381,7 +384,7 @@ document.addEventListener('DOMContentLoaded', function() {
             margin: 0,
             verticalAlign: 'top',
             y: 25,
-            symbolHeight: 280,
+            symbolHeight: 580,
             reversed: true
         },
 
@@ -394,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
 
         data: {
-            csvURL: window.location.origin + '/COS30045/data-viz-projek/datasets/student_math_80.csv'
+            csvURL: window.location.origin + '/datasets/student_math_80.csv'
         },
 
         series: [{
