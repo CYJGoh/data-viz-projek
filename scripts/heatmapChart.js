@@ -29,13 +29,17 @@ $.get("datasets/studytimedata.csv", function(CSVdata) {
         },
 
         xAxis: {
-            categories: ['< 2 hours', '2 to 5 hours', '5 to 10 hours', '> 10 Hours']
+            categories: ['< 2 hours', '2 to 5 hours', '5 to 10 hours', '> 10 Hours'],
+            title: {
+                text: "Weekly Study Time"
+            }
         },
 
         yAxis: {
             categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
-            title: null,
-            //reversed: true
+            title: {
+                text: "Free Time After School"
+            }
         },
 
         accessibility: {
