@@ -29,11 +29,11 @@ $.get("datasets/studytimedata.csv", function(CSVdata) {
         },
 
         xAxis: {
-            categories: ['1hr Study Time', '2hrs Study Time', '3hrs Study Time', '4hrs Study Time']
+            categories: ['< 2 hours', '2 to 5 hours', '5 to 10 hours', '> 10 Hours']
         },
 
         yAxis: {
-            categories: ['1hr Free Time', '2hrs Free Time', '3hrs Free Time', '4hrs Free Time', '5hrs Free Time'],
+            categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
             title: null,
             reversed: true
         },
@@ -53,7 +53,8 @@ $.get("datasets/studytimedata.csv", function(CSVdata) {
         colorAxis: {
             min: 0,
             minColor: '#E6F0FF',
-            maxColor: '#003380'
+            maxColor: '#003380',
+            reversed: false,
         },
 
         legend: {
@@ -67,8 +68,8 @@ $.get("datasets/studytimedata.csv", function(CSVdata) {
 
         tooltip: {
             formatter: function() {
-                return '<b>' + getPointCategoryName(this.point, 'x') + '</b> for <br><b>' +
-                    this.point.value + '</b> student/s with <br><b>' + getPointCategoryName(this.point, 'y') + '</b>';
+                return '<b>' + getPointCategoryName(this.point, 'x') + ' Study Time </b> for <br><b>' +
+                    this.point.value + '</b> students with <br><b>' + getPointCategoryName(this.point, 'y') + ' Free Time </b>';
             }
         },
 
