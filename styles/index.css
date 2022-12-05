@@ -189,16 +189,6 @@ body {
     opacity: 0;
 }
 
-.chartOne-fade-in {
-    opacity: 1;
-    transition: opacity 1.5s ease;
-}
-
-.chartOne-fade-out {
-    opacity: 0;
-    transition: opacity 1.5s ease;
-}
-
 #lunchChartChoices,
 #heatmapChoices {
     font-size: 1vw;
@@ -306,6 +296,17 @@ body {
 .RHChartContainer h1 {
     color: rgba(38, 38, 38, 1);
     text-align: center;
+}
+
+/* fading in and out for the charts*/
+.chartOne-fade-in {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+}
+
+.chartOne-fade-out {
+    opacity: 0;
+    transition: opacity 1.5s ease;
 }
 
 /* === scrollbar styling === */
