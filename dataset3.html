@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--import D3 library-->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!--import jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/1.0.21/jquery.csv.min.js"></script>
+
+    <!--import Chart.js library-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--import HighCharts library-->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/boost-canvas.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <script src="https://code.highcharts.com/modules/heatmap.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- link google fonts api and Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- link styles.css -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <title>Data Vis Projek</title>
+</head>
+
+<body>
+    <!-- Back to top button -->
+    <a id="backToTopButton"></a>
+
+    <!-- navbar -->
+    <div id="navbar">
+        <a href="index.html">Dataset 1</a>
+        <a href="dataset2.html">Dataset 2</a>
+        <a href="dataset3.html">Dataset 3</a>
+    </div>
+
+    <!--hero image/banner-->
+    <div class="home-hero-image">
+        <div class="home-hero-text">
+            <h1>Students Academic Performances</h1>
+            <p>An In-depth Analysis</p>
+        </div>
+    </div>
+
+    <!-- dataset context container -->
+    <div class="dataset-context-container">
+        <h1>Dataset Details</h1>
+        <h2>Context</h2>
+        <p>Student's grade secured in their exams</p>
+        <h2>Content</h2>
+        <p>The dataset contains the student's grades in their exams for various subjects</p>
+        <h2>Inspiration</h2>
+        <p>To analyze and understand the influence of parental background, and other <br> various factors on student's academic performance</p>
+    </div>
+
+    <hr class="line-black"><br><br>
+
+    <!-- chart context card -->
+    <div class="contentContainer">
+        <table>
+            <tr>
+                <th class="small-non-bold">Total Pass</th>
+                <th class="small-non-bold">Total Fail</th>
+            </tr>
+            <tr>
+                <td class="big-bold">865</td>
+                <td class="big-bold">135</td>
+            </tr>
+        </table>
+        <br>
+        <table>
+            <tr>
+                <th class="small-non-bold">Highest Pass Rate</th>
+                <th class="small-non-bold">Lowest Pass rate</th>
+            </tr>
+            <tr>
+                <td class="big-bold">Some College</td>
+                <td class="big-bold">Master's Degree</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="line-black">
+
+    <!-- Chart based on parental education level -->
+    <div class="RHChartContainer" id="RHChartOne">
+        <h1>Maths Pass Rate Based On Parental Education Level</h1>
+        <canvas id="RHChart"></canvas>
+    </div>
+
+    <!-- Load scripts -->
+    <script type="text/javascript" src="scripts/raisedHandsChart.js"></script>
+    <script type="text/javascript" src="scripts/backToTop.js"></script>
+    <script type="text/javascript" src="scripts/stickyNavbar.js"></script>
+
+    <script>
+        // script to fade in elements when scrolling
+        $(document).scroll(function () {
+            var y = $(this).scrollTop();
+            
+            if (y > 10) {
+                document.getElementById('RHChartOne').classList.remove('chartOne-fade-out');
+                document.getElementById('RHChartOne').classList.add('chartOne-fade-in');
+            } else {
+                document.getElementById('RHChartOne').classList.add('chartOne-fade-out');
+                document.getElementById('RHChartOne').classList.remove('chartOne-fade-in');
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

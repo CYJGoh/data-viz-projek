@@ -291,6 +291,23 @@ body {
 }
 
 
+
+/* === raisedHand chart styling === */
+.RHChartContainer {
+    position: relative;
+    width: 50vw;
+    height: 60vh;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 200px;
+    opacity: 0;
+}
+
+.RHChartContainer h1 {
+    color: rgba(38, 38, 38, 1);
+    text-align: center;
+}
+
 /* === scrollbar styling === */
 
 ::-webkit-scrollbar-track {
