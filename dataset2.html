@@ -98,38 +98,172 @@
 
     <hr class="line-black">
 
-    <!--heatmap chart (student's study time based on free time)-->
-    <figure class="highcharts-figure" id="HeatmapChartOne">
-        <h1>Students' Study Time By Amount Of Free Time</h1>
-        <div id="heatmapContainer1"></div>
-        <p class="highcharts-description">
-            Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
-        </p>
-    </figure>
+    <div class="heatmapsContainer">
+        <select name="heatmapSelection" id="heatmapChoices" onchange="changeHeatmap()">
+            <option value="math1" selected>Math (Count)</option>
+            <option value="math2">Math (Percentage)</option>
+            <option value="portugese1">Portugese (Count)</option>
+            <option value="portugese2">Portugese (Percentage)</option>
+        </select>
 
-    <figure class="highcharts-figure" id="HeatmapChartTwo">
-        <h1>Students' Study Time By Amount Of Free Time</h1>
-        <div id="heatmapContainer2"></div>
-        <p class="highcharts-description">
-            Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
-        </p>
-    </figure>
+        <!---------MATH-------->
+        <div id="math_num">
+            <!--num of student taken math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartOne" id="HeatmapChart1">
+                <h1 id="heatmap1Title">Total Of Students' Taken Math By Study Time and Amount Of Free Time</h1>
+                <div id="heatmapContainer1"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
 
-    <figure class="highcharts-figure" id="HeatmapChartThree">
-        <h1>Students' Study Time By Amount Of Free Time</h1>
-        <div id="heatmapContainer3"></div>
-        <p class="highcharts-description">
-            Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
-        </p>
-    </figure>
+            <!--num of student failed math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartTwo" id="HeatmapChart2">
+                <h1 id="heatmap2Title">Number Of Students Failed Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer2"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
 
-    <figure class="highcharts-figure" id="HeatmapChartFour">
-        <h1>Students' Study Time By Amount Of Free Time</h1>
-        <div id="heatmapContainer4"></div>
-        <p class="highcharts-description">
-            Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
-        </p>
-    </figure>
+            <!--num of student passed math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartThree" id="HeatmapChart3">
+                <h1 id="heatmap3Title">Number Of Students Passed Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer3"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student scored >80% for math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartFour" id="HeatmapChart4">
+                <h1 id="heatmap4Title">Number Of Students Scored More Than 80% In Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer4"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+        </div>
+
+        <!---------PORTUGESE-------->
+        <div id="portugese_num">
+            <!--num of student taken portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartOne" id="HeatmapChart5">
+                <h1 id="heatmap5Title">Total Of Students' Taken Portugese By Study Time and Amount Of Free Time</h1>
+                <div id="heatmapContainer5"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student failed portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartTwo" id="HeatmapChart6">
+                <h1 id="heatmap6Title">Number Of Students Failed Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer6"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student passed portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartThree" id="HeatmapChart7">
+                <h1 id="heatmap7Title">Number Of Students Passed Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer7"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student scored >80% for portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartFour" id="HeatmapChart8">
+                <h1 id="heatmap8Title">Number Of Students Scored More Than 80% In Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer8"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+        </div>
+
+        <!-------MATH PERCENT-------->
+        <div id="math_percent">
+            <!--num of student taken math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartOne" id="HeatmapChart9">
+                <h1 id="heatmap9Title">Total Of Students' Taken Math By Study Time and Amount Of Free Time</h1>
+                <div id="heatmapContainer9"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student failed math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartTwo" id="HeatmapChart10">
+                <h1 id="heatmap10Title">Percentage Of Students Failed Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer10"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student passed math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartThree" id="HeatmapChart11">
+                <h1 id="heatmap11Title">Percentage Of Students Passed Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer11"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student scored >80% for math by study time and free time heatmap-->
+            <figure class="highcharts-figure chartFour" id="HeatmapChart12">
+                <h1 id="heatmap12Title">Percentage Of Students Scored More Than 80% In Math By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer12"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+        </div>
+
+        <!---------PORTUGESE PERCENT-------->
+        <div id="portugese_percent">
+            <!--num of student taken portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartOne" id="HeatmapChart13">
+                <h1 id="heatmap13Title">Total Of Students' Taken Portugese By Study Time and Amount Of Free Time</h1>
+                <div id="heatmapContainer13"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student failed portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartTwo" id="HeatmapChart14">
+                <h1 id="heatmap14Title">Percentage Of Students Failed Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer14"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student passed portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartThree" id="HeatmapChart15">
+                <h1 id="heatmap15Title">Percentage Of Students Passed Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer15"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+
+            <!--num of student scored >80% for portugese by study time and free time heatmap-->
+            <figure class="highcharts-figure chartFour" id="HeatmapChart16">
+                <h1 id="heatmap16Title">Percentage Of Students Scored More Than 80% In Portugese By Their Study Time and Free Time</h1>
+                <div id="heatmapContainer16"></div>
+                <p class="highcharts-description">
+                    Heatmap showing study time data per free time. Heatmaps are commonly used to visualize hot spots within data sets, and to show patterns or correlations. Due to their compact nature, they are often used with large sets of data.
+                </p>
+            </figure>
+        </div>
+
+
+    </div>
 
 
     <!-- Load scripts -->
@@ -144,12 +278,20 @@
 
             if (y > 900) {
                 //$('.lunchChartContainer').show('slow', 'swing');
-                document.getElementById('HeatmapChartOne').classList.remove('chartOne-fade-out');
-                document.getElementById('HeatmapChartOne').classList.add('chartOne-fade-in');
+                var elem = document.getElementsByClassName('chartOne');
+                for (var i = 0; i < elem.length; i++) {
+                    console.log(i);
+                    elem[i].classList.remove('chartOne-fade-out');
+                    elem[i].classList.add('chartOne-fade-in');
+                }
             } else {
                 //$('.lunchChartContainer').hide('slow', 'swing');
-                document.getElementById('HeatmapChartOne').classList.remove('chartOne-fade-in');
-                document.getElementById('HeatmapChartOne').classList.add('chartOne-fade-out');
+                var elem = document.getElementsByClassName('chartOne');
+                for (var i = 0; i < elem.length; i++) {
+                    console.log(i);
+                    elem[i].classList.remove('chartOne-fade-in');
+                    elem[i].classList.add('chartOne-fade-out');
+                }
             }
 
         });
