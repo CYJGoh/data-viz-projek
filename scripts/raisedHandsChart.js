@@ -59,7 +59,7 @@ function raisedHandsChart(myData) {
                     },
                     title: {
                         display: true,
-                        text: "Amount of times student raised hand",
+                        text: "Amount of raised hands",
                     },
                 },
                 y: {
