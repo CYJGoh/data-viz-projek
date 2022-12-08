@@ -191,7 +191,8 @@ body {
 
 #lunchChartChoices,
 #heatmapChoices,
-#polarChoices {
+#polarChoices,
+#stackedChoices {
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
     padding: 5px 10px;
@@ -203,7 +204,8 @@ body {
 
 #lunchChartChoices:hover,
 #heatmapChoices:hover,
-#polarChoices:hover {
+#polarChoices:hover,
+#stackedChoices:hover {
     outline: 2px solid rgba(38, 98, 255, 0.5);
 }
 
@@ -212,7 +214,9 @@ body {
 #heatmapChoices:hover,
 #heatmapChoices option:hover,
 #polarChoices:hover,
-#polarChoices option:hover {
+#polarChoices option:hover,
+#stackedChoices:hover,
+#stackedChoices option:hover {
     cursor: pointer;
 }
 
@@ -271,7 +275,8 @@ body {
 }
 
 .heatmapsContainer,
-.polarContainer {
+.polarContainer,
+.stackedContainer {
     width: 50vw;
     margin: 0 auto;
 }
@@ -282,8 +287,9 @@ body {
 #portugese_num,
 #portugese_percent,
 #math_percent,
-#polarChart3,
-#polarChart4 {
+#stackedChart1,
+#stackedChart2,
+#sixCatPor {
     display: none;
 }
 

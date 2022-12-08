@@ -18,18 +18,18 @@ var polarPorDataPercent = [
     [88.66, 86, 80.83, 81.61, 73.33],
 ];
 
-function changePolar() {
+function changeAlcoholChart() {
     var myVal = document.getElementById("polarChoices").value;
     if (myVal === "count") {
         document.getElementById("polarChart1").style.display = "block";
         document.getElementById("polarChart2").style.display = "block";
-        document.getElementById("polarChart3").style.display = "none";
-        document.getElementById("polarChart4").style.display = "none";
+        document.getElementById("stackedChart1").style.display = "none";
+        document.getElementById("stackedChart2").style.display = "none";
     } else if (myVal === "percent") {
         document.getElementById("polarChart1").style.display = "none";
         document.getElementById("polarChart2").style.display = "none";
-        document.getElementById("polarChart3").style.display = "block";
-        document.getElementById("polarChart4").style.display = "block";
+        document.getElementById("stackedChart1").style.display = "block";
+        document.getElementById("stackedChart2").style.display = "block";
     }
 
 }
@@ -79,13 +79,18 @@ Highcharts.chart('polarContainer1', {
         valueSuffix: ' students'
     },
 
+    colors: [
+        '#36B37E',
+        '#FF5630'
+    ],
+
     series: [{
-            name: 'Students Failed',
-            data: polarMathData[0]
-        },
-        {
             name: 'Students Passed',
             data: polarMathData[1]
+        },
+        {
+            name: 'Students Failed',
+            data: polarMathData[0]
         }
     ],
 
@@ -140,13 +145,18 @@ Highcharts.chart('polarContainer2', {
         valueSuffix: ' students'
     },
 
+    colors: [
+        '#36B37E',
+        '#FF5630'
+    ],
+
     series: [{
-            name: 'Students Failed',
-            data: polarPorData[0]
-        },
-        {
             name: 'Students Passed',
             data: polarPorData[1]
+        },
+        {
+            name: 'Students Failed',
+            data: polarPorData[0]
         }
     ],
 
@@ -156,58 +166,61 @@ Highcharts.chart('polarContainer2', {
 
 });
 
-Highcharts.chart('polarContainer3', {
+Highcharts.chart('stackedContainer1', {
     chart: {
-        polar: true,
-        type: 'line',
+        type: 'column',
         marginTop: 40,
         marginBottom: 80,
         backgroundColor: '#EFEFEF',
-        height: 700,
+        height: 700
     },
-
     title: {
-        text: '',
-    },
-
-    subtitle: {
         text: ''
     },
-
-    pane: {
-        size: '85%'
-    },
-
-    legend: {
-        align: 'right',
-        verticalAlign: 'top',
-        y: 100,
-        layout: 'vertical'
-    },
-
     xAxis: {
         categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
-        tickmarkPlacement: 'on'
+        title: {
+            text: 'Weekend Alcohol Consumption'
+        }
     },
-
     yAxis: {
         min: 0,
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
+        max: 100,
+        title: {
+            text: 'Percentage of Students'
+        }
     },
-
+    legend: {
+        align: 'right',
+        floating: true,
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    colors: [
+        '#36B37E',
+        '#FF5630'
+    ],
     tooltip: {
-        shared: true,
-        valueSuffix: ' students'
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}%<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
     },
 
     series: [{
-            name: 'Students Failed',
-            data: polarMathDataPercent[0]
-        },
-        {
             name: 'Students Passed',
             data: polarMathDataPercent[1]
+        },
+        {
+            name: 'Students Failed',
+            data: polarMathDataPercent[0]
         }
     ],
 
@@ -217,7 +230,71 @@ Highcharts.chart('polarContainer3', {
 
 });
 
-Highcharts.chart('polarContainer4', {
+Highcharts.chart('stackedContainer2', {
+    chart: {
+        type: 'column',
+        marginTop: 40,
+        marginBottom: 80,
+        backgroundColor: '#EFEFEF',
+        height: 700
+    },
+    title: {
+        text: ''
+    },
+    xAxis: {
+        categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
+        title: {
+            text: 'Weekend Alcohol Consumption'
+        }
+    },
+    yAxis: {
+        min: 0,
+        max: 100,
+        title: {
+            text: 'Percentage of Students'
+        }
+    },
+    legend: {
+        align: 'right',
+        floating: true,
+        borderColor: '#CCC',
+        borderWidth: 1,
+        shadow: false
+    },
+    colors: [
+        '#36B37E',
+        '#FF5630'
+    ],
+    tooltip: {
+        headerFormat: '<b>{point.x}</b><br/>',
+        pointFormat: '{series.name}: {point.y}%<br/>Total: {point.stackTotal}'
+    },
+    plotOptions: {
+        column: {
+            stacking: 'normal',
+            dataLabels: {
+                enabled: true
+            }
+        }
+    },
+
+    series: [{
+            name: 'Students Passed',
+            data: polarPorDataPercent[1]
+        },
+        {
+            name: 'Students Failed',
+            data: polarPorDataPercent[0]
+        }
+    ],
+
+    credits: {
+        enabled: false
+    }
+
+});
+
+/* Highcharts.chart('polarContainer4', {
     chart: {
         polar: true,
         type: 'line',
@@ -276,7 +353,4 @@ Highcharts.chart('polarContainer4', {
         enabled: false
     }
 
-});
-
-var path = window.location.pathname;
-console.log(window.location.origin + '/COS30045/data-viz-projek/datasets/dataset2/student_alcohol_math_fail.csv');
+}); */

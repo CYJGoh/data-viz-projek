@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--import D3 library-->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://d3js.org/d3.v7.js"></script>
 
     <!--import jQuery library-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -267,7 +267,7 @@
     <hr class="line-black"><br><br>
 
     <div class="polarContainer">
-        <select name="polarSelection" id="polarChoices" onchange="changePolar()">
+        <select name="polarSelection" id="polarChoices" onchange="changeAlcoholChart()">
             <option value="count" selected>Student Count</option>
             <option value="percent">Student Percentage</option>
         </select>
@@ -288,29 +288,76 @@
             </p>
         </figure>
 
-        <figure class="highcharts-figure " id="polarChart3">
+        <figure class="highcharts-figure " id="stackedChart1">
             <h1>Percentage Of Students Failed and Passed Portugese By Their Weekly Alcohol Consumption</h1>
-            <div id="polarContainer3"></div>
+            <div id="stackedContainer1"></div>
             <p class="highcharts-description">
                 The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
             </p>
         </figure>
 
-        <figure class="highcharts-figure " id="polarChart4">
+        <figure class="highcharts-figure " id="stackedChart2">
             <h1>Percentage Of Students Failed and Passed Portugese By Their Weekly Alcohol Consumption</h1>
-            <div id="polarContainer4"></div>
+            <div id="stackedContainer2"></div>
             <p class="highcharts-description">
                 The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
             </p>
         </figure>
     </div>
 
+    <hr class="line-black"><br><br>
+
+    <div class="stackedContainer">
+        <select name="stackedSelection" id="stackedChoices" onchange="changeStackedChart()">
+            <option value="math" selected>Math</option>
+            <option value="portugese">Portugese</option>
+        </select>
+
+        <div id="sixCatMath">
+            <figure class="highcharts-figure sixCatStackedMath">
+                <h1>Percentage Of Students Failed Math By Different Categories</h1>
+                <div id="sixCategoriesStackedBar1"></div>
+                <p class="highcharts-description">
+                    The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+                </p>
+            </figure>
+
+            <figure class="highcharts-figure sixCatStackedMath">
+                <h1>Percentage Of Students Passed Math By Different Categories</h1>
+                <div id="sixCategoriesStackedBar2"></div>
+                <p class="highcharts-description">
+                    The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+                </p>
+            </figure>
+
+        </div>
+
+        <div id="sixCatPor">
+            <figure class="highcharts-figure sixCatStackedPor">
+                <h1>Percentage Of Students Passed Portugese By Different Categories</h1>
+                <div id="sixCategoriesStackedBar3"></div>
+                <p class="highcharts-description">
+                    The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+                </p>
+            </figure>
+
+            <figure class="highcharts-figure sixCatStackedPor">
+                <h1>Percentage Of Students Passed Portugese By Different Categories</h1>
+                <div id="sixCategoriesStackedBar4"></div>
+                <p class="highcharts-description">
+                    The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+                </p>
+            </figure>
+
+        </div>
+    </div>
 
     <!-- Load scripts -->
     <script type="text/javascript" src="scripts/heatmapChart.js"></script>
-    <script type="text/javascript" src="scripts/polarChart.js"></script>
+    <script type="text/javascript" src="scripts/alcoholChart.js"></script>
     <script type="text/javascript" src="scripts/backToTop.js"></script>
     <script type="text/javascript" src="scripts/stickyNavbar.js"></script>
+    <script type="text/javascript" src="scripts/stackBarSixCat.js"></script>
 
     <script>
         // script to fade in elements when scrolling
