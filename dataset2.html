@@ -18,6 +18,7 @@
 
     <!--import HighCharts library-->
     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/modules/accessibility.js"></script>
@@ -261,13 +262,53 @@
                 </p>
             </figure>
         </div>
+    </div>
 
+    <hr class="line-black"><br><br>
 
+    <div class="polarContainer">
+        <select name="polarSelection" id="polarChoices" onchange="changePolar()">
+            <option value="count" selected>Student Count</option>
+            <option value="percent">Student Percentage</option>
+        </select>
+
+        <figure class="highcharts-figure " id="polarChart1">
+            <h1>Number Of Students Failed and Passed Math By Their Weekly Alcohol Consumption</h1>
+            <div id="polarContainer1"></div>
+            <p class="highcharts-description">
+                The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+            </p>
+        </figure>
+
+        <figure class="highcharts-figure " id="polarChart2">
+            <h1>Number Of Students Failed and Passed Portugese By Their Weekly Alcohol Consumption</h1>
+            <div id="polarContainer2"></div>
+            <p class="highcharts-description">
+                The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+            </p>
+        </figure>
+
+        <figure class="highcharts-figure " id="polarChart3">
+            <h1>Percentage Of Students Failed and Passed Portugese By Their Weekly Alcohol Consumption</h1>
+            <div id="polarContainer3"></div>
+            <p class="highcharts-description">
+                The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+            </p>
+        </figure>
+
+        <figure class="highcharts-figure " id="polarChart4">
+            <h1>Percentage Of Students Failed and Passed Portugese By Their Weekly Alcohol Consumption</h1>
+            <div id="polarContainer4"></div>
+            <p class="highcharts-description">
+                The wind rose chart is often used to visualize wind patterns. In this example, the chart shows the wind speed distribution. This is achieved with a polar stacked column chart.
+            </p>
+        </figure>
     </div>
 
 
     <!-- Load scripts -->
     <script type="text/javascript" src="scripts/heatmapChart.js"></script>
+    <script type="text/javascript" src="scripts/polarChart.js"></script>
     <script type="text/javascript" src="scripts/backToTop.js"></script>
     <script type="text/javascript" src="scripts/stickyNavbar.js"></script>
 
@@ -280,7 +321,6 @@
                 //$('.lunchChartContainer').show('slow', 'swing');
                 var elem = document.getElementsByClassName('chartOne');
                 for (var i = 0; i < elem.length; i++) {
-                    console.log(i);
                     elem[i].classList.remove('chartOne-fade-out');
                     elem[i].classList.add('chartOne-fade-in');
                 }
@@ -288,7 +328,6 @@
                 //$('.lunchChartContainer').hide('slow', 'swing');
                 var elem = document.getElementsByClassName('chartOne');
                 for (var i = 0; i < elem.length; i++) {
-                    console.log(i);
                     elem[i].classList.remove('chartOne-fade-in');
                     elem[i].classList.add('chartOne-fade-out');
                 }

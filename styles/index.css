@@ -190,7 +190,8 @@ body {
 }
 
 #lunchChartChoices,
-#heatmapChoices {
+#heatmapChoices,
+#polarChoices {
     font-size: 1vw;
     font-family: 'Montserrat', sans-serif;
     padding: 5px 10px;
@@ -201,14 +202,17 @@ body {
 }
 
 #lunchChartChoices:hover,
-#heatmapChoices:hover {
+#heatmapChoices:hover,
+#polarChoices:hover {
     outline: 2px solid rgba(38, 98, 255, 0.5);
 }
 
 #lunchChartChoices:hover,
 #lunchChartChoices option:hover,
 #heatmapChoices:hover,
-#heatmapChoices option:hover {
+#heatmapChoices option:hover,
+#polarChoices:hover,
+#polarChoices option:hover {
     cursor: pointer;
 }
 
@@ -266,23 +270,26 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.heatmapsContainer {
+.heatmapsContainer,
+.polarContainer {
     width: 50vw;
     margin: 0 auto;
 }
 
 
-/* Hide portugese heatmap when loaded */
+/* Hide other charts when loaded */
 
 #portugese_num,
 #portugese_percent,
-#math_percent {
+#math_percent,
+#polarChart3,
+#polarChart4 {
     display: none;
 }
 
 
-
 /* === raisedHand chart styling === */
+
 .RHChartContainer {
     position: relative;
     width: 50vw;
@@ -298,7 +305,9 @@ body {
     text-align: center;
 }
 
+
 /* fading in and out for the charts*/
+
 .chartOne-fade-in {
     opacity: 1;
     transition: opacity 1.5s ease;
@@ -308,6 +317,7 @@ body {
     opacity: 0;
     transition: opacity 1.5s ease;
 }
+
 
 /* === scrollbar styling === */
 
