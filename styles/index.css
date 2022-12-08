@@ -230,7 +230,7 @@ body {
     margin: 5em auto 0 auto;
 }
 
-.highcharts-figure h1 {
+.highcharts-figure h1, .highcharts-figure p {
     text-align: center;
 }
 
