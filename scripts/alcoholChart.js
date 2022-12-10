@@ -38,8 +38,6 @@ Highcharts.chart('polarContainer1', {
     chart: {
         polar: true,
         type: 'line',
-        marginTop: 40,
-        marginBottom: 80,
         backgroundColor: '#EFEFEF',
         height: 700,
     },
@@ -53,13 +51,12 @@ Highcharts.chart('polarContainer1', {
     },
 
     pane: {
-        size: '85%'
+        size: '90%'
     },
 
     legend: {
         align: 'right',
-        verticalAlign: 'top',
-        y: 100,
+        verticalAlign: 'bottom',
         layout: 'vertical'
     },
 
@@ -104,8 +101,6 @@ Highcharts.chart('polarContainer2', {
     chart: {
         polar: true,
         type: 'line',
-        marginTop: 40,
-        marginBottom: 80,
         backgroundColor: '#EFEFEF',
         height: 700,
     },
@@ -119,13 +114,12 @@ Highcharts.chart('polarContainer2', {
     },
 
     pane: {
-        size: '85%'
+        size: '90%'
     },
 
     legend: {
         align: 'right',
-        verticalAlign: 'top',
-        y: 100,
+        verticalAlign: 'bottom',
         layout: 'vertical'
     },
 
@@ -170,7 +164,7 @@ Highcharts.chart('stackedContainer1', {
     chart: {
         type: 'column',
         marginTop: 40,
-        marginBottom: 80,
+        marginBottom: 100,
         backgroundColor: '#EFEFEF',
         height: 700
     },
@@ -234,7 +228,7 @@ Highcharts.chart('stackedContainer2', {
     chart: {
         type: 'column',
         marginTop: 40,
-        marginBottom: 80,
+        marginBottom: 100,
         backgroundColor: '#EFEFEF',
         height: 700
     },

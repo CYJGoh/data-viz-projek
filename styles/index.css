@@ -230,7 +230,7 @@ body {
     margin: 5em auto 0 auto;
 }
 
-.highcharts-figure h1, .highcharts-figure p {
+.highcharts-figure h1 {
     text-align: center;
 }
 
@@ -272,6 +272,7 @@ body {
 
 .highcharts-description {
     font-family: 'Montserrat', sans-serif;
+    text-align: justify;
 }
 
 .heatmapsContainer,

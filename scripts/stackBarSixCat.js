@@ -133,6 +133,8 @@ $.get('datasets/dataset2/six_categories_pass.csv', function(CSVdata) {
             }
         },
 
+        colors: ['#95FFC6', '#C695FF'],
+
         series: [{
                 name: 'Yes',
                 data: data[0]
@@ -284,6 +286,8 @@ $.get('datasets/dataset2/six_categories_pass_por.csv', function(CSVdata) {
                 }
             }
         },
+
+        colors: ['#95FFC6', '#C695FF'],
 
         series: [{
                 name: 'Yes',
