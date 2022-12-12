@@ -78,7 +78,7 @@ Highcharts.chart('polarContainer1', {
 
     colors: [
         '#36B37E',
-        '#FF5630'
+        '#CC0000'
     ],
 
     series: [{
@@ -141,7 +141,7 @@ Highcharts.chart('polarContainer2', {
 
     colors: [
         '#36B37E',
-        '#FF5630'
+        '#CC0000'
     ],
 
     series: [{
@@ -193,7 +193,7 @@ Highcharts.chart('stackedContainer1', {
     },
     colors: [
         '#36B37E',
-        '#FF5630'
+        '#CC0000'
     ],
     tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
@@ -257,7 +257,7 @@ Highcharts.chart('stackedContainer2', {
     },
     colors: [
         '#36B37E',
-        '#FF5630'
+        '#CC0000'
     ],
     tooltip: {
         headerFormat: '<b>{point.x}</b><br/>',
@@ -287,64 +287,3 @@ Highcharts.chart('stackedContainer2', {
     }
 
 });
-
-/* Highcharts.chart('polarContainer4', {
-    chart: {
-        polar: true,
-        type: 'line',
-        marginTop: 40,
-        marginBottom: 80,
-        backgroundColor: '#EFEFEF',
-        height: 700,
-    },
-
-    title: {
-        text: '',
-    },
-
-    subtitle: {
-        text: ''
-    },
-
-    pane: {
-        size: '85%'
-    },
-
-    legend: {
-        align: 'right',
-        verticalAlign: 'top',
-        y: 100,
-        layout: 'vertical'
-    },
-
-    xAxis: {
-        categories: ['Very Low', 'Low', 'Neutral', 'High', 'Very High'],
-        tickmarkPlacement: 'on'
-    },
-
-    yAxis: {
-        min: 0,
-        gridLineInterpolation: 'polygon',
-        lineWidth: 0,
-    },
-
-    tooltip: {
-        shared: true,
-        valueSuffix: ' students'
-    },
-
-    series: [{
-            name: 'Students Failed',
-            data: polarPorDataPercent[0]
-        },
-        {
-            name: 'Students Passed',
-            data: polarPorDataPercent[1]
-        }
-    ],
-
-    credits: {
-        enabled: false
-    }
-
-}); */

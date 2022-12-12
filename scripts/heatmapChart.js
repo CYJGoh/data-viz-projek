@@ -120,25 +120,25 @@ function heatmapCreator(container, colour, csvPath, tooltipType, minValue) {
 
 // Math (Count) heatmaps
 var heatmap1 = heatmapCreator('heatmapContainer1', '#003380', 'datasets/dataset2/studytimedata.csv', 'count', 0); //student count
-var heatmap2 = heatmapCreator('heatmapContainer2', '#FF5630', 'datasets/dataset2/student_math_fail.csv', 'count', 0); //fail
+var heatmap2 = heatmapCreator('heatmapContainer2', '#CC0000', 'datasets/dataset2/student_math_fail.csv', 'count', 0); //fail
 var heatmap3 = heatmapCreator('heatmapContainer3', '#36B37E', 'datasets/dataset2/student_math_pass.csv', 'count', 0); //pass
 var heatmap4 = heatmapCreator('heatmapContainer4', '#1d3ee8', 'datasets/dataset2/student_math_80.csv', 'count', 0); //>80%
 
 // Portugese (Count) heatmaps
 var heatmap5 = heatmapCreator('heatmapContainer5', '#003380', 'datasets/dataset2/student_por_count.csv', 'count', 0); //student count
-var heatmap6 = heatmapCreator('heatmapContainer6', '#FF5630', 'datasets/dataset2/student_por_fail.csv', 'count', 0); //fail
+var heatmap6 = heatmapCreator('heatmapContainer6', '#CC0000', 'datasets/dataset2/student_por_fail.csv', 'count', 0); //fail
 var heatmap7 = heatmapCreator('heatmapContainer7', '#36B37E', 'datasets/dataset2/student_por_pass.csv', 'count', 0); //pass
 var heatmap8 = heatmapCreator('heatmapContainer8', '#1d3ee8', 'datasets/dataset2/student_por_80.csv', 'count', 0); //>80%
 
 // Math (Percentage) heatmaps
 var heatmap9 = heatmapCreator('heatmapContainer9', '#003380', 'datasets/dataset2/studytimedata.csv', 'count', 0); //student count
-var heatmap10 = heatmapCreator('heatmapContainer10', '#FF5630', 'datasets/dataset2/student_math_fail_percent.csv', 'percentage', 0); //fail
+var heatmap10 = heatmapCreator('heatmapContainer10', '#CC0000', 'datasets/dataset2/student_math_fail_percent.csv', 'percentage', 0); //fail
 var heatmap11 = heatmapCreator('heatmapContainer11', '#36B37E', 'datasets/dataset2/student_math_pass_percent.csv', 'percentage', 45); //pass
 var heatmap12 = heatmapCreator('heatmapContainer12', '#1d3ee8', 'datasets/dataset2/student_math_80_percent.csv', 'percentage', 0); //>80%
 
 // Portugese (Percentage) heatmaps
 var heatmap13 = heatmapCreator('heatmapContainer13', '#003380', 'datasets/dataset2/student_por_count.csv', 'count'); //student count
-var heatmap14 = heatmapCreator('heatmapContainer14', '#FF5630', 'datasets/dataset2/student_por_fail_percent.csv', 'percentage', 0); //fail
+var heatmap14 = heatmapCreator('heatmapContainer14', '#CC0000', 'datasets/dataset2/student_por_fail_percent.csv', 'percentage', 0); //fail
 var heatmap15 = heatmapCreator('heatmapContainer15', '#36B37E', 'datasets/dataset2/student_por_pass_percent.csv', 'percentage', 65); //pass
 var heatmap16 = heatmapCreator('heatmapContainer16', '#1d3ee8', 'datasets/dataset2/student_por_80_percent.csv', 'percentage', 0); //>80%
 
